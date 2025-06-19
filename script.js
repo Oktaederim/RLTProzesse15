@@ -367,17 +367,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // --- INITIALIZATION: A simple, explicit, and non-conflicting setup ---
+    // --- INITIALIZATION: Radically simplified and explicit event listeners ---
     function addEventListeners() {
         // Buttons
         dom.resetBtn.addEventListener('click', resetToDefaults);
         dom.resetSlidersBtn.addEventListener('click', resetSlidersToRef);
         dom.setReferenceBtn.addEventListener('click', handleSetReference);
 
-        // All other inputs trigger the master update function
-        allInteractiveElements.forEach(el => {
-            const isButton = el.tagName === 'BUTTON';
-            if (isButton) return;
+        // All other inputs trigger a master update function
+        const allInputs = document.querySelectorAll('input, select');
+        allInputs.forEach(el => {
+            if (el.tagName === 'BUTTON') return;
 
             const eventType = (el.tagName === 'SELECT' || el.type === 'checkbox' || el.type === 'radio') ? 'change' : 'input';
             
@@ -387,7 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     enforceLimits(target);
                 }
                 
-                if (target.id.includes('Slider')) {
+                if (target.type === 'range') {
                     const inputId = target.id.replace('Slider', '');
                     const isFloat = inputId !== 'volumenstrom';
                     const value = isFloat ? parseFloat(target.value).toFixed(1) : target.value;
@@ -404,7 +404,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (['kuehlerAktiv', 'feuchteSollTyp'].includes(target.id) || target.name === 'kuehlmodus') {
                     handleKuehlerToggle();
                 }
-
                 calculateAll();
             });
         });
