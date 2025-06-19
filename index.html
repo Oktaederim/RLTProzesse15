@@ -157,8 +157,8 @@
                       <div class="input-group-inline">
                         <label>Gesamt-Betriebszeit (h/a oder d/a)</label>
                         <div>
-                            <input type="number" id="betriebsstundenGesamt" value="2500" step="10" min="0" title="Gesamt-Betriebsstunden pro Jahr">
-                             <input type="number" id="betriebstageGesamt" value="104.2" step="0.1" min="0" title="Gesamt-Betriebstage pro Jahr">
+                            <input type="number" id="betriebsstundenGesamt" value="2400" step="10" min="0" title="Gesamt-Betriebsstunden pro Jahr">
+                             <input type="number" id="betriebstageGesamt" value="100.0" step="0.1" min="0" title="Gesamt-Betriebstage pro Jahr">
                         </div>
                     </div>
                 </div>
@@ -223,14 +223,14 @@
             <div class="formula-content">
                 <h4>Thermische Berechnungen</h4>
                 <ul>
-                    <li><strong>Enthalpie (h):</strong><p>h = 1,006 × T[°C] + (x[g/kg]/1000) × (2501 + 1,86 × T[°C])</p></li>
-                    <li><strong>Thermische Leistung (P_th):</strong><p>P_th [kW] = (Volumenstrom [m³/h] / 3600) × 1,2 [kg/m³] × (h_nach - h_vor) [kJ/kg]</p></li>
+                    <li><strong>Enthalpie (h):</strong><p>Formel: h = 1,006 × T[°C] + (x[g/kg]/1000) × (2501 + 1,86 × T[°C])</p></li>
+                    <li><strong>Thermische Leistung (P_th):</strong><p>Formel: P_th [kW] = (Volumenstrom [m³/h] / 3600) × 1,2 [kg/m³] × (h_nach - h_vor) [kJ/kg]</p></li>
                 </ul>
                 <h4>Kostenberechnungen</h4>
                 <ul>
-                    <li><strong>Elektrische Ventilatorleistung (P_el):</strong><p>P_el [kW] = (SFP [W/(m³/h)] × Volumenstrom [m³/h]) / 1000</p></li>
-                    <li><strong>Kosten pro Stunde (€/h):</strong><p>Kosten = Leistung [kW] × Energiepreis [€/kWh]</p></li>
-                    <li><strong>Kosten pro Jahr (€/a):</strong><p>Jahreskosten = Leistung [kW] × Betriebsstunden [h/a] × Energiepreis [€/kWh]</p></li>
+                    <li><strong>Elektrische Ventilatorleistung (P_el):</strong><p>Formel: P_el [kW] = (SFP [W/(m³/h)] × Volumenstrom [m³/h]) / 1000</p></li>
+                    <li><strong>Kosten pro Stunde (€/h):</strong><p>Formel: Kosten = Leistung [kW] × Energiepreis [€/kWh]</p></li>
+                    <li><strong>Kosten pro Jahr (€/a):</strong><p>Formel: Jahreskosten = Leistung [kW] × Betriebsstunden [h/a] × Energiepreis [€/kWh]</p></li>
                 </ul>
             </div>
         </details>
