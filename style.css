@@ -272,6 +272,9 @@ input[type="range"]::-moz-range-thumb {
     background-color: #e9ecef; padding: 0.5rem 0.8rem;
     border-radius: 6px; margin-bottom: 0.5rem;
 }
+.cost-display.fan-power-display {
+    margin-top: 1rem;
+}
 .cost-display.power-summary .cost-label, .cost-display.power-summary .cost-value {
     font-weight: bold; color: var(--primary-color); background: none;
 }
