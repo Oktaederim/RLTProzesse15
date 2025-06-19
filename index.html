@@ -162,6 +162,10 @@
                         </div>
                     </div>
                 </div>
+                 <div class="cost-display power-summary fan-power-display">
+                    <span class="cost-label">Elektrische Leistung Ventilator:</span>
+                    <span class="cost-value" id="leistungVentilator">0,00 kW</span>
+                </div>
             </div>
             <hr>
             <div class="grid-container cost-grid">
@@ -226,7 +230,7 @@
                 <ul>
                     <li><strong>Elektrische Ventilatorleistung (P_el):</strong><p>P_el [kW] = (SFP [W/(m³/h)] × Volumenstrom [m³/h]) / 1000</p></li>
                     <li><strong>Kosten pro Stunde (€/h):</strong><p>Kosten = Leistung [kW] × Energiepreis [€/kWh]</p></li>
-                    <li><strong>Kosten pro Jahr (€/a):</strong><p>Jahreskosten = Kosten pro Stunde [€/h] × Betriebsstunden [h/a]</p></li>
+                    <li><strong>Kosten pro Jahr (€/a):</strong><p>Jahreskosten = Leistung [kW] × Betriebsstunden [h/a] × Energiepreis [€/kWh]</p></li>
                 </ul>
             </div>
         </details>
